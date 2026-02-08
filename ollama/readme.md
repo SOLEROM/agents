@@ -19,7 +19,7 @@ ollama pull gemma3:12b
 ollama pull gemma3:27b
 ollama pull gemma3:latest
 ollama pull llama3.2:latest
-
+ollama pull glm-4.7-flash
 
 ```
 

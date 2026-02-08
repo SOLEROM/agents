@@ -1,5 +1,18 @@
 # agents
 
+## playground 
+* [ollama](./ollama/readme.md)
+* llama.cpp
+* TensorRT
+* [claude](./cloude/readme.md)
+* [codex](./codex/readme.md)
+* opencode
+* [openclaw](./openclaw/readme.md)
+* [nanochat](./nanochat/readme.md)
+* n8n
+
+# Terms
+
 ## chatbot
 * Generates responses to text/voice prompts
 
@@ -12,24 +25,10 @@ built around large language models but include additional decision logic and too
 
 
 ## Engines
-underlying system that executes models.
-
-agent stack:
+underlying system that executes models ; agent stack:
 * Agent: Makes decisions + orchestrates actions.
 * Model: Provides the intelligence (i.e., generates text / reasoning results).
 * Tools / APIs: Functions the agent can call (search, calculator, scripts, etc.).
-
-
-* ollama
-* llama.cpp
-* TensorRT
-
-* claude
-* codex
-* opencode
-* openclaw
-* nanochat
-
 
 ## orchestrators
 coordinating multiple parts or agents to accomplish a larger goal
@@ -41,8 +40,5 @@ coordinating multiple parts or agents to accomplish a larger goal
 * Deciding which agent should handle this request
 * Maintaining shared context between sub-agents
 * Managing error recovery and task dependencies
-
-n8n
-
 
 
