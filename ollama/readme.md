@@ -14,13 +14,13 @@
 ```
 pulls
 ```
-ollama pull gpt-oss
+ollama pull gpt-oss:20b
 ollama pull gemma3:12b
 ollama pull gemma3:27b
-ollama pull gemma3:latest
-ollama pull llama3.2:latest
-ollama pull glm-4.7-flash
-
+ollama pull gemma3:4b
+ollama pull llama3.2:3b
+ollama pull glm-4.7-flash:q4_K_M
+ollama pull qwen3-coder:30b
 
 
 ```
@@ -41,9 +41,9 @@ pip install requests transformers sentencepiece psutil
 * runs
 
 ```
-python3 ollama_benchmark.py
-python3 ollama_benchmark.py --model llama3.2:latest
-python3 ollama_benchmark.py --num-predict 256 --warmup 1 --repeats 4 --csv bench.csv --json bench.json
+sudo python3 ollama_benchmark.py
+sudo python3 ollama_benchmark.py --model llama3.2:latest
+sudo python3 ollama_benchmark.py --num-predict 256 --warmup 1 --repeats 4 --csv bench.csv --json bench.json
 ```
 
 
