@@ -1,4 +1,4 @@
-# openclaw
+# openclaw 🦞
 
 * https://docs.openclaw.ai/
 
