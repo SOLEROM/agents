@@ -1,35 +1,15 @@
+
 # claude
+* [install](./install/install.md) | [desktop](./install/desktop.md)
+* [concepts](./concepts.md)
 
-### install
-
-```
-curl -fsSL https://claude.ai/install.sh | bash
-
-Setting up Claude Code...
-
-✔ Claude Code successfully installed!        
-
-  Version: 2.1.34
-
-  Location: ~/.local/bin/claude
-
-
-  Next: Run claude --help to get started
-
-✅ Installation complete!
-
-```
-### run online mode
-
-```
-claude
-/login
-```
-
-### run offline using ollama
-
-```
-ollama launch claude --model gpt-oss
-
-
-```
+## basic concepts
+* [custom commands](./configs/customCmds.md) add new commands to claude
+* [permissions](./configs/permissions.md) for tools
+* [repetitive errors](./tips/repetiveErrors.md) tips
+* [planMode](./modes/planMode.md) 
+* [thinking](./modes/thinking.md)
+* [hooks](./hooks/readme.md) 
+* [github](./actions/githubs.md) integration
+* [mcpServers](./mcp/readme.md)
+* [sdk](./sdk/readme.md)
