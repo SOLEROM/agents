@@ -1,6 +1,7 @@
 # agents
 
 * [concepts](./concepts.md)
+* [ide's](./ides/readme.md)
 
 ## playground 
 * [ollama](./ollama/readme.md)
