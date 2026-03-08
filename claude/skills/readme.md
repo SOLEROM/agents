@@ -23,3 +23,31 @@ description: Reviews pull requests for code quality. Use when reviewing PRs or c
 * Brand guidelines for your organization
 * Documentation templates for specific types of docs
 * Debugging checklists for particular frameworks
+
+## metadata fields
+
+```
+name        (required)
+description (required)
+
+allowed-tools:   restricts which tools Claude
+model:           Specifies which Claude model to use for the skill. 
+
+
+```
+
+## best practices
+* keep SKILL.md under 500 lines
+* link to supporting files (references, scripts, assets) that Claude reads only when needed
+* Scripts execute without loading their contents into context - tell claude to run the script not to read it.
+
+* The open standard suggests organizing your skill directory with:
+```
+    scripts/ — Executable code
+    references/ — Additional documentation
+    assets/ — Images, templates, or other data files
+```
+
+## sharing skills
+* by .claude/skills in your repo
+* by plugins
