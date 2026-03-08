@@ -1,0 +1,121 @@
+# {{PROJECT_NAME}} CI Workflow
+# Runs on PR and push to main/dev
+
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+env:
+  PYTHON_VERSION: "{{PYTHON_VERSION}}"
+  NODE_VERSION: "{{NODE_VERSION}}"
+
+jobs:
+  # ========================
+  # Backend Tests
+  # ========================
+  backend:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      
+      - name: Install dependencies
+        run: |
+          cd backend
+          pip install poetry
+          poetry install --with dev
+      
+      - name: Lint
+        run: |
+          cd backend
+          poetry run {{LINT_COMMAND}}
+      
+      - name: Run tests
+        run: |
+          cd backend
+          poetry run pytest --cov=. --cov-report=xml
+      
+      - name: Check coverage
+        run: |
+          cd backend
+          poetry run coverage report --fail-under=90
+
+  # ========================
+  # Frontend Tests
+  # ========================
+  frontend:
+    name: Frontend Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+      
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm ci
+      
+      - name: Lint
+        run: |
+          cd frontend
+          npm run lint
+      
+      - name: Run unit tests
+        run: |
+          cd frontend
+          npm run test:unit
+      
+      - name: Install Playwright
+        run: |
+          cd frontend
+          npx playwright install --with-deps
+      
+      - name: Run E2E tests
+        run: |
+          cd frontend
+          npm run test:e2e
+
+  # ========================
+  # Shared Tests
+  # ========================
+  shared:
+    name: Shared Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      
+      - name: Install dependencies
+        run: |
+          pip install poetry
+          poetry install --with dev
+      
+      - name: Run shared tests
+        run: |
+          poetry run pytest shared/ --cov=shared --cov-report=xml
+      
+      - name: Check coverage (95% for shared)
+        run: |
+          poetry run coverage report --fail-under=95
