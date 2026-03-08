@@ -1,0 +1,12 @@
+#################################################################
+########################   AGENTS  ##############################
+### claude
+alias cld_auto='claude --dangerously-skip-permissions'
+alias cld_desk='claude-desktop'
+alias cld_limits='/data/agents/myClaudeWEB/getLimits.sh'
+### openclaw
+alias clw_start='systemctl --user restart openclaw-gateway.service'
+alias clw_stop='systemctl --user stop openclaw-gateway.service'
+### ollama 0.0.0.0
+alias oll_start='sudo systemctl restart ollama'
+alias oll_stop='sudo systemctl stop ollama'

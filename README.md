@@ -1,15 +1,21 @@
 # agents
 
+* [concepts](./concepts.md)
+
 ## playground 
 * [ollama](./ollama/readme.md)
 * llama.cpp
 * TensorRT
-* [claude](./cloude/readme.md)
+* [claude](./claude/readme.md)
 * [codex](./codex/readme.md)
 * opencode
 * [openclaw](./openclaw/readme.md)
 * [nanochat](./nanochat/readme.md)
-* n8n
+
+## tools
+* [n8n](./n8n/readme.md)
+* [vllm](./vllm/readme.md)
+* [openRouter](./openRouter/readme.md)
 
 # Terms
 
@@ -41,4 +47,5 @@ coordinating multiple parts or agents to accomplish a larger goal
 * Maintaining shared context between sub-agents
 * Managing error recovery and task dependencies
 
-
+## deploy
+* [deploying agents](./deploy/readme.md)
