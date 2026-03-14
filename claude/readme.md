@@ -19,4 +19,7 @@
 * [hooks](./hooks/readme.md) - trigger actions on events
 * [mcpServers](./mcp/readme.md) - provide external tools 
 
+## teams
+* [teams](./teams/readme.md) 
 
+![alt text](image.png)

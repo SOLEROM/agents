@@ -7,3 +7,10 @@
 
 * delagating subagent dont see the skill loaded in the main conversation and vice versa.
 * for needed skill for the subagent add it to agents/aaa.md file the ```skills:``` meta;
+
+## using
+
+```
+/agents
+
+```
