@@ -1,9 +1,11 @@
 #################################################################
 ########################   AGENTS  ##############################
 ### claude
-alias cld_auto='claude --dangerously-skip-permissions'
+alias cld_skip='claude --dangerously-skip-permissions'
 alias cld_desk='claude-desktop'
 alias cld_limits='/data/agents/myClaudeWEB/getLimits.sh'
+alias cld_auto='auto-claude-ui'
+
 ### openclaw
 alias clw_start='systemctl --user restart openclaw-gateway.service'
 alias clw_stop='systemctl --user stop openclaw-gateway.service'

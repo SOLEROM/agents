@@ -4,9 +4,11 @@
 
 ### claude
 ```
-cld_auto    run skip permissions
+cld_skip    run skip permissions
 cld_desk    run desktop
 cld_limits  query for limits print
+cld_auto    auto-claude-ui
+
 ```
 * [claude](./cloude/readme.md)
 
