@@ -3,6 +3,8 @@
 * [concepts](./concepts.md) | [terms](./terms.md)
 * [ide's](./ides/readme.md)
 * [benchmarks](./_benchmarks/readme.md)
+* [prompts library](./prompts/readme.md) 
+
 
 ## playground 
 * [claude](./claude/readme.md) | [skils.git](https://github.com/SOLEROM/cld-skills)
@@ -11,6 +13,8 @@
 * [openclaw](./openclaw/readme.md)
 * llama.cpp
 * TensorRT
+
+* [autoLoop](./autoLoop/readme.md)
 
 ### also offline
 * [ollama](./ollama/readme.md)
@@ -33,3 +37,7 @@
 
 ## deploy
 * [deploying agents](./deploy/readme.md)
+
+## infrastructure
+* [crawlers](./craws/readme.md)
+* [cross-model talks](./crossModel/readme.md)
