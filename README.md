@@ -31,6 +31,9 @@
 * [vllm](./vllm/readme.md)
 * [openRouter](./openRouter/readme.md)
 
+## methods
+* [agentopology](agentopology/readme.md)
+
 ## mcp
 * [context7](context7/readme.md)
 
